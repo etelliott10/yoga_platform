@@ -3,9 +3,9 @@ import Link from 'next/link'
 const Navbar = () => {
     return (
         <nav>
-    <div class="nav-wrapper">
+    <div className="nav-wrapper">
 
-      <a  class="brand-logo center">
+      <a  className="brand-logo center">
             {/* <img class="material-icons" src="images/watermelon-logo.png"/> */}
           WuWuMelon</a>
       {/* <ul id="nav-mobile" class="left hide-on-med-and-down">

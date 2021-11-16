@@ -3,6 +3,8 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  
+
   return (
     <>
     
@@ -26,17 +28,25 @@ export default function Home() {
         </p> */}
 
         <div className={styles.grid}>
-        <div class="card">
-        <div class="card-image">
-          <img src="images/instructor-background.png"/>
-          <span class="card-title">Learn the fundamentals of yoga</span>
+        <div className="card">
+        <div className="card-image">
+          <Image 
+           priority
+           
+           src="/images/instructor-background.png"
+           width="100%" 
+           height="90%" 
+           layout="responsive" 
+         
+           alt=""/>
+          <span className="card-title">Fundamentals of yoga</span>
         </div>
-        <div class="card-content">
+        <div className="card-content">
           <p>Learn the fundamentals of yoga with a certified yoga instructor. This is Carol. She has been instructing yoga classes for 4 years
                 with over 500 hours of experience.</p>
         </div>
-        <div class="card-action">
-          <a class="waves-effect waves-light btn #69f0ae green accent-2" href="https://byu.zoom.us/j/99886472539?pwd=azl1VnpFMlF5UWkxUld5T3l5NXVBZz09">View Class</a>
+        <div className="card-action">
+          <a className="waves-effect waves-light btn #69f0ae green accent-2" href="https://byu.zoom.us/j/99886472539?pwd=azl1VnpFMlF5UWkxUld5T3l5NXVBZz09">View Class</a>
           
         </div>
       </div>
