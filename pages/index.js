@@ -33,9 +33,9 @@ export default function Home() {
           <Image 
            priority
            
-           src="/images/instructor-background.png"
+           src="/images/instructor-background.jpeg"
            width="100%" 
-           height="90%" 
+           height="70%" 
            layout="responsive" 
          
            alt=""/>
