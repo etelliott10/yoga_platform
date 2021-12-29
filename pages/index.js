@@ -1,10 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import {useAuth} from "../context/auth"
 
 export default function Home() {
-  
 
+  const {user, login, logout, loginWithGithub} = useAuth();
+  
+  
   return (
     <>
     
@@ -16,41 +19,29 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+      <div> {JSON.stringify(user, null, 2)}</div>
 
-        
-        {/* <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p> */}
-
-        <div className={styles.grid}>
+      <div className={styles.grid}>
         <div className="card">
-        <div className="card-image">
-          <Image 
-           priority
-           
-           src="/images/instructor-background.jpeg"
-           width="100%" 
-           height="70%" 
-           layout="responsive" 
-         
-           alt=""/>
-          <span className="card-title">Fundamentals of yoga</span>
-        </div>
-        <div className="card-content">
-          <p>Learn the fundamentals of yoga with a certified yoga instructor. This is Carol. She has been instructing yoga classes for 4 years
+          <div className="card-image">
+            <Image 
+              priority
+              src="/images/instructor-background.jpeg"
+              width="100%" 
+              height="70%" 
+              layout="responsive" 
+              alt=""/>
+            <span className="card-title">Fundamentals of yoga</span>
+          </div>
+          <div className="card-content">
+            <p>Learn the fundamentals of yoga with a certified yoga instructor. This is Carol. She has been instructing yoga classes for 4 years
                 with over 500 hours of experience.</p>
-        </div>
-        <div className="card-action">
-          <a className="waves-effect waves-light btn #69f0ae green accent-2" href="https://byu.zoom.us/j/99886472539?pwd=azl1VnpFMlF5UWkxUld5T3l5NXVBZz09">View Class</a>
-          
+          </div>
+          <div className="card-action">
+            <a className="waves-effect waves-light btn #69f0ae green accent-2" href="https://byu.zoom.us/j/99886472539?pwd=azl1VnpFMlF5UWkxUld5T3l5NXVBZz09">View Class</a>  
+          </div>
         </div>
       </div>
-        </div>
       </main>
     </div>
     </>

@@ -1,0 +1,11 @@
+.image-logo {
+    display: flex;
+    flex-direction: column;
+
+    height: 20px;
+    width: 20px;
+}
+
+.image-logo-a {
+    margin-left: 30px;
+}
