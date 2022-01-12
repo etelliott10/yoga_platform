@@ -8,7 +8,7 @@ import { redirect } from "next/dist/server/api-utils";
 
 interface IAuth {
     user: User | null,
-    login: () => void,
+    getUserData: () => void,
     logout: () => void,
     // signup: () => void
     // loginWithGithub: () => void,
@@ -18,11 +18,11 @@ interface IAuth {
 const auth = getAuth(app);
 
 const AuthContext = createContext<IAuth>({
-    user: null, login: () => {}, logout: () => {}
+    user: null, getUserData: () => {}, logout: () => {}
      
 });
 
-const AuthProvider: FC = ({ children }) => {
+const AuthProvider = ({ children }) => {
     const [user, setUser] = useState<User | null>(null)
 
     useEffect(() => {
@@ -36,7 +36,7 @@ const AuthProvider: FC = ({ children }) => {
        return unsubscribe;
     }, [])
 
-const login = async () => {
+const getUserData = async () => {
         try {
             const userCredentials = await signInWithPopup(auth, new GoogleAuthProvider());
             console.log({...userCredentials.user});
@@ -45,9 +45,7 @@ const login = async () => {
                 email: userCredentials.user.email,
                 name: userCredentials.user.displayName,
                 provider: userCredentials.user.providerData[0].providerId,
-                photoUrl: userCredentials.user.photoURL,
-                
-                
+                photoUrl: userCredentials.user.photoURL
             })
             console.log("Document written with ID: ", docRef.id);
         } catch (error) {
@@ -80,17 +78,9 @@ const login = async () => {
                 email: userCredentials.user.email,
                 name: userCredentials.user.displayName,
                 provider: userCredentials.user.providerData[0].providerId,
-                photoUrl: userCredentials.user.photoURL,
-                // subscribe: false
+                photoUrl: userCredentials.user.photoURL
             })
             console.log("Document written with ID: ", docRef.id);
-        } catch (error) {
-            console.error(error);
-        }
-    }
-    const loginWithGithub = async () => {
-        try {
-            await signInWithPopup(auth, new GithubAuthProvider());
         } catch (error) {
             console.error(error);
         }
@@ -105,11 +95,6 @@ const login = async () => {
         }
     }
 
-    return (
-        <AuthContext.Provider value={{user, login, logout}}>
-            {children}
-        </AuthContext.Provider>
-    )
 }
 const useAuth = () => useContext(AuthContext);
 
