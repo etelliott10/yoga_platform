@@ -1,34 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Yoga Platform for Busy Mothers
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This project is a yoga platform designed to help busy mothers integrate exercise into their hectic schedules. By enabling users to set up and join yoga classes from various locations such as home, work, parks, or nature, this platform provides flexibility and convenience. The platform leverages Next.js, Zoom API for video conferencing, and OAuth for secure authentication.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Project Description
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Purpose
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+The goal of this platform is to offer a solution for mothers who struggle to find time for exercise. By providing online yoga classes that can be accessed from anywhere, the platform ensures that users can maintain their fitness routines without compromising their responsibilities.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### Key Features
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- **Class Setup:** Instructors can set up yoga classes online, specifying the time, date, and type of class.
+- **Client Participation:** Clients can join classes from their preferred locations, whether at home, work, parks, or in nature.
+- **Zoom Integration:** The platform utilizes the Zoom API to facilitate real-time video conferencing, providing a seamless and interactive class experience.
+- **Secure Authentication:** OAuth is implemented to ensure secure user authentication and data protection.
 
-## Learn More
+## Technology Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js:** Framework for building the web application.
+- **Zoom API:** Integrated for video conferencing capabilities.
+- **OAuth:** Used for secure authentication.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Development Environment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Dependencies
 
-## Deploy on Vercel
+- **Next.js:** React framework for server-side rendering and static site generation.
+- **Zoom API:** For implementing video conferencing features.
+- **OAuth:** For secure user authentication.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Installation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/yoga-platform.git
+   cd yoga-platform
+   ```
+
+### Future Work
+
+- Enhanced Scheduling: Implement more advanced scheduling features to cater to varying time zones and user availability.
+- Feedback System: Develop a feedback system for clients to rate and review classes and instructors.
+- Mobile App: Create a mobile application to enhance accessibility and user experience on the go.
+
+### Useful Websites
+
+- [Next.js] (https://nextjs.org/docs)
+- [Zoom] (https://developers.zoom.us/docs/api/)
+- [OAuth] (https://developers.google.com/identity/protocols/oauth2)
+
+### Conclusion
+
+This yoga platform is a step towards making fitness more accessible for busy mothers. By integrating Next.js, Zoom API, and OAuth, the platform provides a flexible, secure, and user-friendly solution for online yoga classes. The focus on convenience and adaptability ensures that mothers can maintain their fitness routines amidst their busy schedules.

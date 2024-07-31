@@ -1,11 +1,19 @@
 .image-logo {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    height: 20px;
-    width: 20px;
+  height: 20px;
+  width: 20px;
 }
 
 .image-logo-a {
-    margin-left: 30px;
+  margin-left: 30px;
+}
+
+/* .signin-button {
+  color: #4444;
+} */
+
+.signin {
+  color: black;
 }
